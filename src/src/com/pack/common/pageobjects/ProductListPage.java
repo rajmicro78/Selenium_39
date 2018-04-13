@@ -386,7 +386,7 @@ public class ProductListPage {
 		int totalproduct = driver.findElements(By.xpath("//div[@id='product-list-container']/div")).size();
 		for(int i=1;i<=totalproduct;i++){
 			String imgurl= driver.findElement(By.xpath("//div[@id='product-list-container']/div["+i+"]/div/a/div/div/img")).getAttribute("src");
-			//Reporter.log(imgurl);
+			
 			Assert.assertTrue(imgurl!=null);
 			System.out.println(imgurl);
 			System.out.println(companyName);
