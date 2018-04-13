@@ -1,0 +1,101 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HomePage, Registration, Ticket " >
+
+<test name="CP-Denmark" verbose="1">
+   		<parameter name="sitename" value="CPDK"/>
+	
+ 	
+   <classes>
+  <class name="src.com.pack.common.tests.CartPageTest"/>
+  	<class name="src.com.pack.common.tests.HomePageTest"/>	
+  			 
+  			<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  			<class name="src.com.pack.common.tests.TicketCreationTest"/>		 	 
+	</classes>
+</test>
+<test name="BliVakker" verbose="1">
+	<parameter name="sitename" value="BV"/>
+  	<classes>
+  		
+		<class name="src.com.pack.common.tests.HomePageTest"/>	
+   		<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  		<class name="src.com.pack.common.tests.TicketCreationTest"/>	                      	 
+	</classes>
+</test>
+
+
+
+<test name="Netthandelen" preserve-order="true">
+	<parameter name="sitename" value="NH"/>
+  	<classes>
+  		<class name="src.com.pack.common.tests.HomePageTest"/>	
+   		<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  		<class name="src.com.pack.common.tests.TicketCreationTest"/>
+   	</classes>
+</test>
+
+<test name="CP-Finland" verbose="1">
+	<parameter name="sitename" value="CPFI"/>
+  	<classes>
+  		<class name="src.com.pack.common.tests.NASUserRight"/>	
+	  	<class name="src.com.pack.common.tests.HomePageTest"/>	
+		<class name="src.com.pack.common.tests.RegistrationTest"/>	
+		<class name="src.com.pack.common.tests.TicketCreationTest"/>
+				                                             	
+	</classes>
+  </test> 
+
+
+
+
+
+<test name="CP-Austria" verbose="1">
+	<parameter name="sitename" value="CPAT"/>
+   <classes>
+  		<class name="src.com.pack.common.tests.HomePageTest"/>	
+		<class name="src.com.pack.common.tests.RegistrationTest"/>	
+		<class name="src.com.pack.common.tests.TicketCreationTest"/>	    	 
+	</classes>
+</test>
+
+<test name="CP-Sweden" verbose="1">
+   		<parameter name="sitename" value="CPSE"/>
+	
+	
+   	<classes>
+   		<class name="src.com.pack.common.tests.HomePageTest"/>	
+  			 
+  			<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  			<class name="src.com.pack.common.tests.TicketCreationTest"/>		                        	 
+	</classes>
+  	</test>
+
+<test name="CP-Germany" verbose="1">
+   		<parameter name="sitename" value="CPDE"/>
+	
+		
+  	<classes>
+  	<class name="src.com.pack.common.tests.HomePageTest"/>	
+  			 
+  			<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  			<class name="src.com.pack.common.tests.TicketCreationTest"/>	               	 
+	</classes>
+ </test>
+ <test name="Brandsdal" verbose="1">
+   		<parameter name="sitename" value="BON"/>
+	
+		
+  	<classes>
+  			<class name="src.com.pack.common.tests.HomePageTest"/>	
+  			 
+  			<class name="src.com.pack.common.tests.RegistrationTest"/>	
+  			<class name="src.com.pack.common.tests.TicketCreationTest"/>		                                        	 
+	</classes>
+</test>
+ <!-- Test -->
+	</suite>
+ <!-- Suite -->
+
+
+
+

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Checkout]">
+  <test name="BliVakker(failed)">
+    <parameter name="sitename" value="BV"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="masterpass"/>
+        <exclude name="paypal"/>
+        <exclude name="easypayment"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="guestPrepayment"/>
+          <include name="mastercguest"/>
+          <include name="guestBankaxess"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- BliVakker(failed) -->
+  <test name="CP-Finland(failed)">
+    <parameter name="sitename" value="CPFI"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="prepayment"/>
+        <exclude name="masterpass"/>
+        <exclude name="paypal"/>
+        <exclude name="easypayment"/>
+        <exclude name="bankaxess"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="mastercguest"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="loggedinuserTrustly"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- CP-Finland(failed) -->
+  <test name="CP-Germany(failed)">
+    <parameter name="sitename" value="CPDE"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="prepayment"/>
+        <exclude name="easypayment"/>
+        <exclude name="masterpass"/>
+        <exclude name="bankaxess"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="mastercguest"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="loggedinusersofort"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+          <include name="loggedinuserpaypal"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- CP-Germany(failed) -->
+  <test name="CP-Denmark(failed)">
+    <parameter name="sitename" value="CPDK"/>
+    <groups>
+      <run>
+        <exclude name="collector"/>
+        <exclude name="sofort"/>
+        <exclude name="prepayment"/>
+        <exclude name="masterpass"/>
+        <exclude name="paypal"/>
+        <exclude name="easypayment"/>
+        <exclude name="bankaxess"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="mastercguest"/>
+          <include name="loggedinuserDankort"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- CP-Denmark(failed) -->
+  <test name="CP-Sweden(failed)">
+    <parameter name="sitename" value="CPSE"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="prepayment"/>
+        <exclude name="masterpass"/>
+        <exclude name="easypayment"/>
+        <exclude name="paypal"/>
+        <exclude name="bankaxess"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="mastercguest"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="loggedinuserTrustly"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- CP-Sweden(failed) -->
+  <test name="Brandsdal(failed)">
+    <parameter name="sitename" value="BON"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="masterpass"/>
+        <exclude name="easypayment"/>
+        <exclude name="paypal"/>
+        <exclude name="bankaxess"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="guestPrepayment"/>
+          <include name="mastercguest"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- Brandsdal(failed) -->
+  <test name="Netthandelen(failed)">
+    <parameter name="sitename" value="NH"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="masterpass"/>
+        <exclude name="paypal"/>
+        <exclude name="easypayment"/>
+        <exclude name="visacard"/>
+        <exclude name="gmastercard"/>
+        <exclude name="prepayment"/>
+        <exclude name="bankaxess"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinuserCollector"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- Netthandelen(failed) -->
+  <test name="CP-Austria(failed)">
+    <parameter name="sitename" value="CPAT"/>
+    <groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="prepayment"/>
+        <exclude name="easypayment"/>
+        <exclude name="masterpass"/>
+        <exclude name="bankaxess"/>
+        <exclude name="paypal"/>
+        <exclude name="collector"/>
+        <exclude name="trustly"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.com.pack.common.tests.CheckOutPageTest">
+        <methods>
+          <include name="mastercguest"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="loggedinusersofort"/>
+          <include name="setUp"/>
+          <include name="guestCheckout"/>
+          <include name="tearDown"/>
+          <include name="loggedinuserCheckout"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.CheckOutPageTest -->
+    </classes>
+  </test> <!-- CP-Austria(failed) -->
+</suite> <!-- Failed suite [Checkout] -->

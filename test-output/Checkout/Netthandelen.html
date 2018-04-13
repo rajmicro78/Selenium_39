@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>TestNG:  Netthandelen</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Netthandelen</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Apr 12 14:53:49 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>174 seconds (174024 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td>dankort masterpass easypayment bankaxess gmastercard trustly visacard paypal sofort prepayment </td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card<br/>
+<a href="#Output-248710794" onClick='toggleBox("Output-248710794", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-248710794" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-248710794">
+Navigate to HomePage<br/>
+Click on fixed price link<br/>
+Clicked on Menu-1-RESERVEDELER<br/>
+Product Final Price- kr 990,00<br/>
+Product add to cart- 2<br/>
+Payment section-true<br/>
+Card Payment Selected<br/>
+Card Master Payment <br/>
+Master Card Number- 5413000000000000<br/>
+Master Card Expiry- 2020<br/>
+Master Card CVV- 786<br/>
+Master Ok Button<br/>
+Final Order Number- 16208402<br/>
+</div>
+</td>
+<td></td>
+<td>79</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@4671e53b</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment<br/>
+<a href="#Output-1073741635" onClick='toggleBox("Output-1073741635", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1073741635" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1073741635">
+Navigate to HomePage<br/>
+Click on fixed price link<br/>
+Clicked on Menu-1-RESERVEDELER<br/>
+Product Final Price- kr 199,00<br/>
+Product add to cart- 2<br/>
+Collector Payment Selected<br/>
+Collector First Name-Tester<br/>
+Collector Last Name- Person<br/>
+Collector Address-Startveien 56<br/>
+Collector Zipcode- 9300<br/>
+Final Order Number- 16208403<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@4671e53b</td></tr>
+</table><p>
+</body>
+</html>

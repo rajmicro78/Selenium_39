@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>TestNG:  CP-Sweden</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>CP-Sweden</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 11 17:19:42 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>314 seconds (314220 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td>dankort masterpass easypayment bankaxess paypal sofort prepayment </td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.guestCheckout()'><b>guestCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Search and Buy Gift as Guest Card Visa Payment<br/>
+<a href="#Output-1807176280" onClick='toggleBox("Output-1807176280", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1807176280" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1807176280">
+Search-Presentkort<br/>
+Product Final Price- 100 kr<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Totalt 200 kr<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Email Enterered- rajeev-11-apr@netthandelen.no<br/>
+Click on Guest Chekout Button<br/>
+Enter Zip Code -10028 <br/>
+Enter Mobile Number -0762552625 <br/>
+Enter First Name- Tøndevoldshagen<br/>
+Enter Last Name- Ola Magne<br/>
+Enter Address- co/ Torget 2 AS, Pb. 2010. 3255 Larvik<br/>
+Card Payment Selected<br/>
+Cart Value-200 kr<br/>
+Visa Option Clicked<br/>
+Next Button Clicked<br/>
+Visa Card Number-4925000000000004<br/>
+Visa Card Expiry-2020<br/>
+Visa CVV-786<br/>
+Visa Ok Button Clicked<br/>
+Final Order Number- 16208314<br/>
+</div>
+</td>
+<td></td>
+<td>66</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@2a70a3d8</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card<br/>
+<a href="#Output-1995952705" onClick='toggleBox("Output-1995952705", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1995952705" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1995952705">
+Navigate to HomePage<br/>
+Clicked on Menu-5-NYHETER<br/>
+Product Location-11- Product Name -Udo Walz Sweet Coconut Hydration Oil 100 ml<br/>
+Product Final Price- 116 kr<br/>
+Product add to cart- 2<br/>
+Gift Certificate applied-CPSE1cd2b4caaf<br/>
+Total Qty-2 ,Amount-Totalt 132 kr<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Click Checkout button from Offer page<br/>
+Payment section-true<br/>
+Card Payment Selected<br/>
+Card Master Payment <br/>
+Master Card Number- 5413000000000000<br/>
+Master Card Expiry- 2020<br/>
+Master Card CVV- 786<br/>
+Master Ok Button<br/>
+Final Order Number- 16208316<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@2a70a3d8</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment<br/>
+<a href="#Output-1060519157" onClick='toggleBox("Output-1060519157", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1060519157" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1060519157">
+Navigate to HomePage<br/>
+Clicked on Menu-5-NYHETER<br/>
+Product Location-5- Product Name -Udo Walz Strong Chia Volume Conditioner 300 ml<br/>
+Product Final Price- 116 kr<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Totalt 232 kr<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Click Checkout button from Offer page<br/>
+Collector Payment Selected<br/>
+Collector Number- 1602079954<br/>
+Collector First Name- FÖRNAMNAKT211<br/>
+Collector Last Name- EFTERNAMNAKT211<br/>
+Collector Address- GATUADRESSAKT211<br/>
+Collector Zipcode- 90737<br/>
+Final Order Number- 16208317<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@2a70a3d8</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserTrustly()'><b>loggedinuserTrustly</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with trustly payment<br/>
+<a href="#Output-1269773610" onClick='toggleBox("Output-1269773610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1269773610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1269773610">
+Navigate to HomePage<br/>
+Clicked on Menu-5-NYHETER<br/>
+Product Location-1- Product Name -Nioxin System 5 Loyalty Kit<br/>
+Product Final Price- 422 kr<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Totalt 844 kr<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Click Checkout button from Offer page<br/>
+Trustly Payment Selected<br/>
+Final Order Number- 16208318<br/>
+</div>
+</td>
+<td></td>
+<td>58</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@2a70a3d8</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.mastercguest()'><b>mastercguest</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Guest Checkout with Card Master Payment<br/>
+<a href="#Output-1977618945" onClick='toggleBox("Output-1977618945", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1977618945" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1977618945">
+Navigate to HomePage<br/>
+Clicked on Menu-5-NYHETER<br/>
+Product Location-12- Product Name -Udo Walz Sweet Coconut Hydrate Conditioner 300 ml<br/>
+Product Final Price- 116 kr<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Totalt 232 kr<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Click Checkout button from Offer page<br/>
+Email Enterered- rajeev-11-apr@netthandelen.no<br/>
+Click on Guest Chekout Button<br/>
+Enter Zip Code -10028 <br/>
+Enter Mobile Number -0762552625 <br/>
+Enter First Name- Tøndevoldshagen<br/>
+Enter Last Name- Ola Magne<br/>
+Enter Address- co/ Torget 2 AS, Pb. 2010. 3255 Larvik<br/>
+Card Payment Selected<br/>
+Card Master Payment <br/>
+Master Card Number- 5413000000000000<br/>
+Master Card Expiry- 2020<br/>
+Master Card CVV- 786<br/>
+Master Ok Button<br/>
+Final Order Number- 16208315<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@2a70a3d8</td></tr>
+</table><p>
+</body>
+</html>

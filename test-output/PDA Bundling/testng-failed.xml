@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PDA Bundling]">
+  <parameter name="uEmail" value="rajeev-21-mar-ch@netthandelen.no"/>
+  <parameter name="nasuser" value="venkata.rao"/>
+  <parameter name="uPassword" value="BN12345"/>
+  <parameter name="naspassword" value="Saisree@25"/>
+  <parameter name="env" value="Releasetest"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="src.com.easy.TestNGCustomReportListener"/>
+    <listener class-name="src.com.pack.listeners.TestListener"/>
+    <listener class-name="com.util.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="5" name="CP-Finland(failed)">
+    <parameter name="sitename" value="CPFI"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- CP-Finland(failed) -->
+</suite> <!-- Failed suite [PDA Bundling] -->
