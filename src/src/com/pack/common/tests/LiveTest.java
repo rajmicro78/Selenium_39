@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import src.com.pack.base.TestBaseSetup;
 import src.com.pack.common.pageobjects.CartPage;
+import src.com.pack.common.pageobjects.CheckOutPage;
 import src.com.pack.common.pageobjects.HomePage;
 import src.com.pack.common.pageobjects.LivePage;
 import src.com.pack.common.pageobjects.ProductDetailPage;
@@ -23,6 +24,7 @@ public class LiveTest extends TestBaseSetup  {
 	LivePage livepage;
 	registration registrationpages;
 	ProductDetailPage productdetailpage;
+	CheckOutPage checkOutPage;
 	
 	CartPage cartPage;
 	public String sitename;
@@ -36,10 +38,12 @@ public class LiveTest extends TestBaseSetup  {
 	private String searchterm1;
 	private String searchterm2;
 	private SearchPage SearchPage;
+	public String uemail;
 	@BeforeClass
 	public void setUp(ITestContext context) {
 		driver=getDriver();
 		objhomePage = new HomePage(driver);
+		uemail = context.getCurrentXmlTest().getParameter("uEmail");
 		productlistpage = new ProductListPage(driver);
 		//registrationpages =new registration(driver);
 		productdetailpage = new ProductDetailPage(driver);
@@ -205,7 +209,7 @@ public class LiveTest extends TestBaseSetup  {
 		//productdetailpage.productrecommended();
 		productdetailpage.productaddtocartbtn();
 	}
-	@Test(priority=6,groups ={"Cartpage"}, description="Check cart page")
+	@Test(priority=6,groups ={"Cartpage & Checkout"}, description="Check & Checkout page test")
 	public void cartpage() throws Exception{
 		livepage.Livesite(appURL);
 		productlistpage.clickMenu();
@@ -215,6 +219,10 @@ public class LiveTest extends TestBaseSetup  {
 		cartPage.increaseqty();
 		//cartPage.addSpecialProduct();
 		cartPage.clickCheckout();
+		checkOutPage = cartPage.gocheckout();
+		Thread.sleep(2000);
+		checkOutPage.guestCheckout(uemail);
+		Thread.sleep(1000);
 	}
 
 }
