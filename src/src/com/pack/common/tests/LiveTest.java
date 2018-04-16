@@ -179,24 +179,27 @@ public class LiveTest extends TestBaseSetup  {
 		SearchPage.searchwithterm(searchterm2,sitename);
 		SearchPage.sortoption(highestrebatt, sitename);	
 	}
-	@Test(priority=3,groups ={"ProductList"}, description="Check Product List Page")
-	public void productList() throws Exception{
-		livepage.Livesite(appURL);
-		objhomePage.clickmenu2();
-		productlistpage.checkimage();
-	}
-	@Test(priority=4,groups ={"Registration"}, description="Check Registration Page")
+	
+	@Test(priority=3,groups ={"Registration"}, description="Check Registration Page")
 	public void register() throws Exception{
 		String registrationpage = appURL+"/register";
 		driver.navigate().to(registrationpage);
 		//livepage.Livesite(registrationpage);
 		livepage.verifyregistrationpage();
 	}
-	@Test(priority=5,groups ={"ProductDetail"}, description="Check Product Detail Page")
-	public void productdetail() throws Exception{
+	@Test(priority=4,groups ={"ProductList"}, description="Check Product List Page")
+	public void productList() throws Exception{
 		livepage.Livesite(appURL);
+		//objhomePage.clickmenu2();
 		productlistpage.clickMenu();
 		Thread.sleep(2000);
+		productlistpage.checkimage();
+	}
+	@Test(priority=5,groups ={"ProductDetail"}, description="Check Product Detail Page")
+	public void productdetail() throws Exception{
+		//livepage.Livesite(appURL);
+		//productlistpage.clickMenu();
+		//Thread.sleep(2000);
 		productlistpage.clickproduct();
 		productdetailpage.productName();
 		productdetailpage.wishlistBtn();
@@ -209,11 +212,11 @@ public class LiveTest extends TestBaseSetup  {
 		//productdetailpage.productrecommended();
 		productdetailpage.productaddtocartbtn();
 	}
-	@Test(priority=6,groups ={"Cartpage & Checkout"}, description="Check & Checkout page test")
+	@Test(priority=6,groups ={"Cartpage "}, description="Check  page test")
 	public void cartpage() throws Exception{
-		livepage.Livesite(appURL);
-		productlistpage.clickMenu();
-		productlistpage.clickproduct();
+		//livepage.Livesite(appURL);
+		//productlistpage.clickMenu();
+		//productlistpage.clickproduct();
 		cartPage = productdetailpage.addtoCart();
 		cartPage.cartPageDetail();
 		cartPage.increaseqty();
@@ -221,8 +224,12 @@ public class LiveTest extends TestBaseSetup  {
 		cartPage.clickCheckout();
 		checkOutPage = cartPage.gocheckout();
 		Thread.sleep(2000);
-		checkOutPage.guestCheckout(uemail);
+		livepage.guestuserData(uemail);
 		Thread.sleep(1000);
+	}
+	@Test(priority=7,groups ={"Checkout"}, description="Checkout page test")
+	public void checkout() throws Exception{
+		livepage.verifycheckoutpage();
 	}
 
 }

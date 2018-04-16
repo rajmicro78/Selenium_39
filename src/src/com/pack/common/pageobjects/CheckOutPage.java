@@ -182,6 +182,9 @@ public class CheckOutPage {
         element.sendKeys(s);
     }       
 }
+    
+    
+    
 
 	public void guestuserData(String uemail) throws Exception {
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(emailTxtFld));
