@@ -15,7 +15,7 @@
 <!--<parameter name="env" value="Test"/>-->
 <parameter name="nasuser" value="venkata.rao"/>
 <parameter name="naspassword" value="Saisree@25"/>
-<parameter name="uEmail" value="rajeev-12-apr@netthandelen.no"/>
+<parameter name="uEmail" value="rajeev-16-apr@netthandelen.no"/>
 <parameter name="uPassword" value="BN12345"/>
  <!--<suite-files>
 	 <suite-file path="home.xml"/>

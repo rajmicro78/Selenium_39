@@ -11,8 +11,8 @@
         <exclude name="prepayment"/>
         <exclude name="masterpass"/>
         <exclude name="paypal"/>
-         <exclude name="easypayment"/>
-         <exclude name ="bankaxess"/>
+        <exclude name="easypayment"/>
+        <exclude name ="bankaxess"/>
          
       </run>
     </groups>
