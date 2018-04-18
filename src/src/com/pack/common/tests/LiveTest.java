@@ -37,6 +37,7 @@ public class LiveTest extends TestBaseSetup  {
 	private String highestrebatt;
 	private String searchterm1;
 	private String searchterm2;
+	
 	private SearchPage SearchPage;
 	public String uemail;
 	@BeforeClass
@@ -61,6 +62,7 @@ public class LiveTest extends TestBaseSetup  {
 			highestrebatt= "Högsta rabatt";
 			searchterm1= "Shampoo";
 			searchterm2= "Cream";
+			
 			break;
 		case "CP-Finland":
 			alphabetical="A–Ö";
@@ -83,6 +85,7 @@ public class LiveTest extends TestBaseSetup  {
 			highestrebatt= "Høyest rabatt";
 			searchterm1= "Shampoo";
 			searchterm2= "Cream";
+		
 		break;
 		case "Brandsdal":
 			alphabetical="A til Å";
@@ -156,8 +159,8 @@ public class LiveTest extends TestBaseSetup  {
 		Reporter.log("Recommended Product  -" +objhomePage.recommendedproduct());
 		Assert.assertTrue(objhomePage.promobanner());
 		Reporter.log("Promo Banner  -" +objhomePage.promobanner());
-		Assert.assertTrue(objhomePage.instagramfeed());
-		Reporter.log("Instagram Feed  -" +objhomePage.instagramfeed());
+		//Assert.assertTrue(objhomePage.instagramfeed());
+		//Reporter.log("Instagram Feed  -" +objhomePage.instagramfeed());
 		Assert.assertTrue(objhomePage.trustpilot());
 		Reporter.log("Trustpilot  -" +objhomePage.trustpilot());
 		//Assert.assertTrue(objhomePage.newsletter());
@@ -229,7 +232,10 @@ public class LiveTest extends TestBaseSetup  {
 	}
 	@Test(priority=7,groups ={"Checkout"}, description="Checkout page test")
 	public void checkout() throws Exception{
+	//	livepage.readExcel();
 		livepage.verifycheckoutpage();
+		livepage.checkpaymentmethod();
+		livepage.removeproduct();
 	}
 
 }

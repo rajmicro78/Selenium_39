@@ -49,9 +49,9 @@ public static void execute( String reportFileName1, String reportFileName, Strin
 	   System.out.println("Sending...");
 	   MimeMessage message = new MimeMessage(session);
 	   message.setFrom(new InternetAddress("espireautomation@gmail.com"));
-	  message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("Walter.Hoff@brandsdalgroup.com, magne@brandsdalgroup.com"));
-	  message.setRecipients(Message.RecipientType.CC, InternetAddress.parse("rajeev.singh@espire.com, venkata.rao@espire.com"));
-	// message.setRecipients(Message.RecipientType.CC, InternetAddress.parse("rajeev.singh@espire.com"));
+	 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("Walter.Hoff@brandsdalgroup.com, magne@brandsdalgroup.com"));
+	 message.setRecipients(Message.RecipientType.CC, InternetAddress.parse("rajeev.singh@espire.com, venkata.rao@espire.com"));
+	//message.setRecipients(Message.RecipientType.CC, InternetAddress.parse("rajeev.singh@espire.com"));
 	   
 	   DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy :: HH:mm:ss");
 	   Date date = new Date();

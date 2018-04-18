@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 //import org.openqa.selenium.JavascriptExecutor;
 import java.util.logging.Level;
 
+import org.apache.log4j.BasicConfigurator;
+
 //import java.awt.event.KeyEvent;
 
 
@@ -69,10 +71,12 @@ public class TestBaseSetup  {
 	
 	public static  WebDriver getDriver() {
 		return driver;
+		
 	}
 	private void setDriver(String browserType, String appURL) {
 	//	cal = Calendar.getInstance();
       //  sdf = new SimpleDateFormat("HH:mm:ss");
+		//BasicConfigurator.configure();
 		switch (browserType) {
 		case "chrome":
 			driver = initChromeDriver(appURL);
@@ -95,7 +99,7 @@ public class TestBaseSetup  {
 		//Reporter.log("Tested Firefox Browser"); 
 		System.out.println("Launching Internet explorer browser..");
 		String basePath = new File("").getAbsolutePath();
-		   //  System.out.println(basePath);
+		     System.out.println("Basep"+basePath);
 		String path = new File("Drivers/IEDriverServer.exe").getAbsolutePath();
 		System.setProperty("webdriver.ie.driver",path);
 		WebDriver driver = new InternetExplorerDriver();
@@ -134,9 +138,9 @@ public class TestBaseSetup  {
 	private static WebDriver initChromeDriver(String appURL) {
 		 
 		String basePath = new File("").getAbsolutePath();
-	   
+		 System.out.println("Basep"+basePath);
 	     String path = new File("Drivers/chromedriver.exe").getAbsolutePath();
-	   
+	     System.out.println("Absp"+path);
 	  
 	  System.setProperty("webdriver.chrome.driver", path);
 		

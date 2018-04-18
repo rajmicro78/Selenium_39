@@ -1,9 +1,21 @@
 package src.com.pack.common.pageobjects;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.util.NumberToTextConverter;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +30,16 @@ public class LivePage extends TestBaseSetup {
 	String PDApass ="9666";
 	String Shopname;
 	public String companyName;
+	
+	@FindBy(id="trck_checkout_top_nav_logo") 										WebElement toplogo;
+	@FindBy(xpath="//span[contains(@class,'layoutCartProductCount')]") 				WebElement cart;
+	@FindBy(xpath="//a[contains(@onclick,'RemoveProductFromCart')]") 				WebElement decreaseqty;
+	//@FindBy(xpath="//a[contains(@onclick,'RemoveAllProductFromCart')]") 			WebElement removeallproduct;
+	private By removeallproduct = By.xpath("//a[contains(@onclick,'RemoveAllProductFromCart')]");
+	//private By wishlistcancel =By.id("add-wishlist-cancel");
+	@FindBy(id="add-wishlist-cancel") 												WebElement wishlistcancel;
+	@FindBy(xpath="//a[contains(@onclick,'ConfirmProductRemoval')]") 				WebElement confirmproductremoval;
+	//private By confirmproductremoval = By.xpath("//a[contains(@onclick,'ConfirmProductRemoval')]");
 	@FindBy(id="txt-post-number") 													WebElement zipCodeTxtFld;
 	@FindBy(id="zipCode") 															WebElement chkzipCodeTxtFld;
 	@FindBy(id="txt-post-number-error") 											WebElement txtzipCodeTxtFld;
@@ -48,10 +70,13 @@ public class LivePage extends TestBaseSetup {
 	@FindBy(id="SmsMarketing-error") 												WebElement txtsms;
 	@FindBy(id="submit-order") 														WebElement submitordBtn;
 	@FindBy(xpath="//h2[@class='site-logo']/a")										WebElement logoImage;
+@FindBy(xpath="//div[@data-ng-if='isPaymentGroupNotAddedToPageAlready(paymentMethod)']")	List<WebElement> paymentMethod;
+	
 	public LivePage (WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		companyName = logoImage.getAttribute("title");
+		
 		
 	}
 	public void Livesite(String appURL) throws Exception{
@@ -105,10 +130,10 @@ public class LivePage extends TestBaseSetup {
 
 	
 	public void verifycheckoutpage() throws Exception{
-		boolean cookie = driver.findElements(By.xpath("//div[@id='cookieInfoBannerControls']/p/a") ).size() != 0;
+		/*boolean cookie = driver.findElements(By.xpath("//div[@id='cookieInfoBannerControls']/p/a") ).size() != 0;
 		if(cookie){
 			driver.findElement(By.xpath("//div[@id='cookieInfoBannerControls']/p/a")).click();
-		}
+		}*/
 		Reporter.log("Verify fields in Checkout form");
 		
 		Assert.assertTrue(verifyobjectpresent(chkfnameTxtFld));
@@ -131,6 +156,86 @@ public class LivePage extends TestBaseSetup {
 		chkemailTxtFld.sendKeys(uemail);
 		guestchkoutBtn.click();
 		
+	}
+	public void checkpaymentmethod() throws Exception {
+		int paymenttype = paymentMethod.size();
+		String[] paytype = new String[paymenttype];
+			for(int i=0;i<paymenttype;i++){
+				int j=i+1;
+			String paymentt =  driver.findElement( By.xpath("//div[@data-ng-if='isPaymentGroupNotAddedToPageAlready(paymentMethod)']["+j+"]/label/span")).getText();
+			paytype[i]=paymentt;
+			System.out.println(paytype[i]);
+			Reporter.log(paytype[i]);
+			}
+		}
+	public void removeproduct() throws Exception {
+		toplogo.click();
+		Thread.sleep(1000);
+		String cartvalue = cart.getText();
+		cart.click();
+		System.out.println("loop to run-"+Integer.parseInt(cartvalue));
+		//for(int i=1;i<=Integer.parseInt(cartvalue);i++){
+			
+			 WebElement decqty =driver.findElement(removeallproduct);
+			 JavascriptExecutor executor = (JavascriptExecutor)driver;
+			 executor.executeScript("arguments[0].click();", decqty);
+			//removeallproduct.click();
+			 Thread.sleep(1000);
+			 System.out.println("WL-"+wishlistcancel.isDisplayed());
+			if(wishlistcancel.isDisplayed()){
+				 wishlistcancel.click();
+			}
+			 Thread.sleep(1000);
+			// boolean confi = driver.findElements(confirmproductremoval).size() != 0;
+			 //System.out.println("confi"+confi);
+			 System.out.println("CPR-"+confirmproductremoval.isDisplayed());
+			 if(confirmproductremoval.isDisplayed()){
+					confirmproductremoval.click();
+				}
+			//decreaseqty.click();
+			//System.out.println(i);
+			Thread.sleep(2000);
+		//}
+	
+	}
+	
+	
+	
+	
+	//public void readExcel(String filePath,String fileName,String sheetName) throws IOException{
+		public void readExcel() throws IOException{
+	    //Create an object of File class to open xlsx file
+		String filePath= "D:";
+		String fileName ="excelread.xlsx";
+		String sheetName="registration";
+	    File file =    new File(filePath+"\\"+fileName);
+	    System.out.println(file);
+	    FileInputStream inputStream = new FileInputStream(file);
+
+	    Workbook guru99Workbook = null;
+	    String fileExtensionName = fileName.substring(fileName.indexOf("."));
+	    if(fileExtensionName.equals(".xlsx")){
+	    guru99Workbook = new XSSFWorkbook(inputStream);
+	    }
+	    else if(fileExtensionName.equals(".xls")){
+	        guru99Workbook = new HSSFWorkbook(inputStream);
+	    }
+	    Sheet guru99Sheet = guru99Workbook.getSheet(sheetName);
+	    int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
+	    for (int i = 0; i < rowCount+1; i++) {
+	        Row row = guru99Sheet.getRow(i);
+	        for (int j = 0; j < row.getLastCellNum(); j++) {
+	        	String str;
+	         
+	        	if(row.getCell(j).getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	        	     str = NumberToTextConverter.toText(row.getCell(j).getNumericCellValue());
+	        	}else{
+	        		 str= row.getCell(j).getStringCellValue();
+	        	}
+	        	System.out.print(str+"|| ");
+	        }
+	        System.out.println();
+	    }
 	}
 	public boolean verifyobjectpresent(WebElement objname){
 		boolean objpresent = objname.isDisplayed();

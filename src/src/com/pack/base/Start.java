@@ -4,12 +4,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.BasicConfigurator;
 import org.testng.TestNG;
 
 public class Start {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//BasicConfigurator.configure();
 		List<String> xmlFile = new ArrayList<String>();
 		String path = new File("brandsdal.xml").getAbsolutePath();
 		//String path1 = new File("D:\\CP-Script\\NSelenium4").getAbsolutePath();
