@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Live Site Testing]">
-  <parameter name="uEmail" value="rajeev-16-apr@netthandelen.no"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PDA Bundling]">
+  <parameter name="uEmail" value="rajeev-23-apr@netthandelen.no"/>
   <parameter name="nasuser" value="venkata.rao"/>
   <parameter name="uPassword" value="BN12345"/>
   <parameter name="naspassword" value="Saisree@25"/>
-  <parameter name="env" value="Live"/>
   <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="src.com.easy.TestNGCustomReportListener"/>
@@ -14,23 +13,114 @@
   </listeners>
   <test thread-count="5" name="CP-Finland(failed)">
     <parameter name="sitename" value="CPFI"/>
-    <groups>
-      <run>
-        <exclude name="Registration"/>
-        <exclude name="Search"/>
-        <exclude name="HomePage"/>
-      </run>
-    </groups>
     <classes>
-      <class name="src.com.pack.common.tests.LiveTest">
+      <class name="src.com.pack.common.tests.PDATest">
         <methods>
-          <include name="checkout"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- src.com.pack.common.tests.LiveTest -->
+      </class> <!-- src.com.pack.common.tests.PDATest -->
     </classes>
   </test> <!-- CP-Finland(failed) -->
-</suite> <!-- Failed suite [Live Site Testing] -->
+  <test thread-count="5" name="CP-Sweden(failed)">
+    <parameter name="sitename" value="CPSE"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- CP-Sweden(failed) -->
+  <test thread-count="5" name="Brandsdal(failed)">
+    <parameter name="sitename" value="BON"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- Brandsdal(failed) -->
+  <test thread-count="5" name="BliVakker(failed)">
+    <parameter name="sitename" value="BV"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- BliVakker(failed) -->
+  <test thread-count="5" name="CP-Austria(failed)">
+    <parameter name="sitename" value="CPAT"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- CP-Austria(failed) -->
+  <test thread-count="5" name="CP-Germany(failed)">
+    <parameter name="sitename" value="CPDE"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- CP-Germany(failed) -->
+  <test thread-count="5" name="CP-Denmark(failed)">
+    <parameter name="sitename" value="CPDK"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- CP-Denmark(failed) -->
+  <test thread-count="5" name="Netthandelen(failed)">
+    <parameter name="sitename" value="NH"/>
+    <classes>
+      <class name="src.com.pack.common.tests.PDATest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="PDAChecking"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- src.com.pack.common.tests.PDATest -->
+    </classes>
+  </test> <!-- Netthandelen(failed) -->
+</suite> <!-- Failed suite [PDA Bundling] -->

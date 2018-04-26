@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>BliVakker</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 22 13:24:03 IST 2018</td>
+<td>Started on:</td><td>Mon Apr 23 15:01:09 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>55 seconds (55598 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1010 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,29 +67,111 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='src.com.pack.common.tests.PDATest.PDAChecking()'><b>PDAChecking</b><br>Test class: src.com.pack.common.tests.PDATest<br>Test method: Pick & Pack<br/>
-<a href="#Output-137533655" onClick='toggleBox("Output-137533655", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-137533655" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-137533655">
-NAS Bundling done<br/>
-1. Finished Picking-469499-Total Product-1<br/>
-2. Finished Picking-469500-Total Product-3<br/>
-0. Finished packing-469499<br/>
-1. Finished packing-469500<br/>
-</div>
-</td>
+<td title='src.com.pack.common.tests.PDATest.initializeTestBaseSetup()'><b>initializeTestBaseSetup</b><br>Test class: src.com.pack.common.tests.PDATest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790421142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1790421142'><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>src.com.pack.common.tests.PDATest@5123a213</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='src.com.pack.common.tests.PDATest.setUp()'><b>setUp</b><br>Test class: src.com.pack.common.tests.PDATest</td>
 <td></td>
-<td>43</td>
-<td>src.com.pack.common.tests.PDATest@2641e737</td></tr>
+<td>0</td>
+<td>src.com.pack.common.tests.PDATest@5123a213</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.PDATest.tearDown()'><b>tearDown</b><br>Test class: src.com.pack.common.tests.PDATest</td>
+<td></td>
+<td>0</td>
+<td>src.com.pack.common.tests.PDATest@5123a213</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='src.com.pack.common.tests.PDATest.PDAChecking()'><b>PDAChecking</b><br>Test class: src.com.pack.common.tests.PDATest<br>Test method: Pick & Pack</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1172131546", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1172131546'><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>src.com.pack.common.tests.PDATest@5123a213</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package src.com.pack.common.tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -25,7 +26,7 @@ public class LiveTest extends TestBaseSetup  {
 	registration registrationpages;
 	ProductDetailPage productdetailpage;
 	CheckOutPage checkOutPage;
-	
+	private By logoImage = By.xpath("//h2[@class='site-logo']/a");
 	CartPage cartPage;
 	public String sitename;
 	private String alphabetical;
@@ -43,6 +44,7 @@ public class LiveTest extends TestBaseSetup  {
 	@BeforeClass
 	public void setUp(ITestContext context) {
 		driver=getDriver();
+		
 		objhomePage = new HomePage(driver);
 		uemail = context.getCurrentXmlTest().getParameter("uEmail");
 		productlistpage = new ProductListPage(driver);
@@ -135,6 +137,8 @@ public class LiveTest extends TestBaseSetup  {
 	}
 	@Test(priority=1,groups ={"HomePage"}, description="Home Page Check")
 	public void HomepageTest() throws Exception  {
+		System.out.println("Home page test");
+		//objhomePage.getdatafromexcel();
 		livepage.Livesite(appURL);
 		Reporter.log("Logo Title-"+objhomePage.verifyCompanyLogo());
 		//Assert.assertTrue(objhomePage.verifySearchBoxPresent());
@@ -174,6 +178,7 @@ public class LiveTest extends TestBaseSetup  {
 	}
 	@Test(priority=2,groups ={"Search"}, description="Search Functionality")
 	public void SearchFunctionality() throws Exception  {
+		System.out.println("Search page test");
 		livepage.Livesite(appURL);
 		HomePage homepage = new HomePage(driver);
 		SearchPage = homepage.search();
@@ -185,21 +190,37 @@ public class LiveTest extends TestBaseSetup  {
 	
 	@Test(priority=3,groups ={"Registration"}, description="Check Registration Page")
 	public void register() throws Exception{
+		System.out.println("Registration  test");
 		String registrationpage = appURL+"/register";
 		driver.navigate().to(registrationpage);
 		//livepage.Livesite(registrationpage);
 		livepage.verifyregistrationpage();
 	}
-	@Test(priority=4,groups ={"ProductList"}, description="Check Product List Page")
-	public void productList() throws Exception{
+	@Test(priority=4,groups ={"Wishlist"}, description="Check Wish List Page")
+	public void wishlist() throws Exception{
+		System.out.println("Wishlist  test");
 		livepage.Livesite(appURL);
+		//objhomePage.clickmenu2();
+		productlistpage.wishlisticon();
+		productlistpage.wishclickMenu();
+		Thread.sleep(2000);
+		productlistpage.wishlistonproductlist(uemail);
+		driver.findElement(logoImage).click();
+		
+	}
+	@Test(priority=5,groups ={"ProductList"}, description="Check Product List Page")
+	public void productList() throws Exception{
+		System.out.println("ProductList  test");
+		Thread.sleep(2000);
+		//livepage.Livesite(appURL);
 		//objhomePage.clickmenu2();
 		productlistpage.clickMenu();
 		Thread.sleep(2000);
 		productlistpage.checkimage();
 	}
-	@Test(priority=5,groups ={"ProductDetail"}, description="Check Product Detail Page")
+	@Test(priority=6,groups ={"ProductDetail"}, description="Check Product Detail Page")
 	public void productdetail() throws Exception{
+		System.out.println("ProductDetail  test");
 		//livepage.Livesite(appURL);
 		//productlistpage.clickMenu();
 		//Thread.sleep(2000);
@@ -215,8 +236,9 @@ public class LiveTest extends TestBaseSetup  {
 		//productdetailpage.productrecommended();
 		productdetailpage.productaddtocartbtn();
 	}
-	@Test(priority=6,groups ={"Cartpage "}, description="Check  page test")
+	@Test(priority=7,groups ={"Cartpage "}, description="Check  page test")
 	public void cartpage() throws Exception{
+		System.out.println("Cartpage  test");
 		//livepage.Livesite(appURL);
 		//productlistpage.clickMenu();
 		//productlistpage.clickproduct();
@@ -230,9 +252,9 @@ public class LiveTest extends TestBaseSetup  {
 		livepage.guestuserData(uemail);
 		Thread.sleep(1000);
 	}
-	@Test(priority=7,groups ={"Checkout"}, description="Checkout page test")
+	@Test(priority=8,groups ={"Checkout"}, description="Checkout page test")
 	public void checkout() throws Exception{
-	//	livepage.readExcel();
+		System.out.println("Checkout  test");
 		livepage.verifycheckoutpage();
 		livepage.checkpaymentmethod();
 		livepage.removeproduct();

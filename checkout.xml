@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Checkout"  >
+<test name="CP-Germany" verbose="1">
+   		<parameter name="sitename" value="CPDE"/>
+		<groups>
+      <run>
+        <exclude name="dankort"/>
+       	<exclude name="prepayment"/>
+       	<exclude name="easypayment"/>
+       	<exclude name="masterpass"/>
+       	<exclude name ="bankaxess"/>
+       	<exclude name="trustly"/>
+         </run>
+    </groups>
+  	<classes>
+  		<class name="src.com.pack.common.tests.CheckOutPageTest"/>                   	 
+	</classes>
+ </test>
+ <test name="Netthandelen" preserve-order="true">
+   		<parameter name="sitename" value="NH"/>
+	<groups>
+      <run>
+        <exclude name="dankort"/>
+        <exclude name="sofort"/>
+        <exclude name="masterpass"/>
+        <exclude name="paypal"/>
+        <exclude name="easypayment"/>
+        <exclude name="visacard"/>
+        <exclude name="gmastercard"/>
+        <exclude name="prepayment"/>
+        <exclude name ="bankaxess"/>
+          <exclude name="trustly"/>
+        </run>
+    </groups>
+  	<classes>
+  			  <class name="src.com.pack.common.tests.CheckOutPageTest"/>
+	</classes>
+</test>
  <test name="CP-Finland" verbose="1">
    		<parameter name="sitename" value="CPFI"/>
 	
@@ -21,26 +57,7 @@
 	</classes>
   </test>
  
-  <test name="Netthandelen" preserve-order="true">
-   		<parameter name="sitename" value="NH"/>
-	<groups>
-      <run>
-        <exclude name="dankort"/>
-        <exclude name="sofort"/>
-        <exclude name="masterpass"/>
-        <exclude name="paypal"/>
-        <exclude name="easypayment"/>
-        <exclude name="visacard"/>
-        <exclude name="gmastercard"/>
-        <exclude name="prepayment"/>
-        <exclude name ="bankaxess"/>
-          <exclude name="trustly"/>
-        </run>
-    </groups>
-  	<classes>
-  			  <class name="src.com.pack.common.tests.CheckOutPageTest"/>
-	</classes>
-</test>
+ 
 
 <test name="BliVakker" verbose="1">
    		<parameter name="sitename" value="BV"/>
@@ -61,22 +78,7 @@
  
 
 
-<test name="CP-Germany" verbose="1">
-   		<parameter name="sitename" value="CPDE"/>
-		<groups>
-      <run>
-        <exclude name="dankort"/>
-       	<exclude name="prepayment"/>
-       	<exclude name="easypayment"/>
-       	<exclude name="masterpass"/>
-       	<exclude name ="bankaxess"/>
-       	  <exclude name="trustly"/>
-        </run>
-    </groups>
-  	<classes>
-  		<class name="src.com.pack.common.tests.CheckOutPageTest"/>                   	 
-	</classes>
- </test>
+
 
 <test name="CP-Denmark" verbose="1">
    		<parameter name="sitename" value="CPDK"/>

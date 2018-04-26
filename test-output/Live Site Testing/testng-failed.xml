@@ -12,15 +12,8 @@
     <listener class-name="src.com.pack.listeners.TestListener"/>
     <listener class-name="com.util.ExtentTestNGIReporterListener"/>
   </listeners>
-  <test thread-count="5" name="CP-Finland(failed)">
-    <parameter name="sitename" value="CPFI"/>
-    <groups>
-      <run>
-        <exclude name="Registration"/>
-        <exclude name="Search"/>
-        <exclude name="HomePage"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="CP-Austria(failed)">
+    <parameter name="sitename" value="CPAT"/>
     <classes>
       <class name="src.com.pack.common.tests.LiveTest">
         <methods>
@@ -32,5 +25,5 @@
         </methods>
       </class> <!-- src.com.pack.common.tests.LiveTest -->
     </classes>
-  </test> <!-- CP-Finland(failed) -->
+  </test> <!-- CP-Austria(failed) -->
 </suite> <!-- Failed suite [Live Site Testing] -->

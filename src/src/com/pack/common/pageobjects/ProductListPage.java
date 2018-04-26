@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -34,8 +36,20 @@ public class ProductListPage {
 	private By logoImage = By.xpath("//h2[@class='site-logo']/a");
 	private By prdCount =By.id("layoutCartProductCount");
 	public String companyName;
+	@FindBy(xpath="//a[contains(@href,'mywishlist')]")		 				WebElement topwishlisticon;
+	@FindBy(id="customerEmailAddress") 										WebElement wishlistemail;
+	@FindBy(xpath="//button[contains(@onclick,'addCustomerEmailAddress')]")	WebElement wishlistBtn;
+	@FindBy(id="customerEmailAddress-error") 								WebElement wishlisterror;
+	@FindBy(xpath="//nav/div/div/a[@class='logo inline']")					WebElement toplogoscroll;
+	@FindBy(id="wishListEmailAddress") 										WebElement wishlistemailadd;
+	@FindBy(id="wishlistProductDetailConfirmEmailAddress") 					WebElement wishemailaddbtn;
+	@FindBy(xpath="//a[contains(@onclick,'toggleWishlistUrl')]")			WebElement wishlisturl;
+	@FindBy(xpath="//a[contains(@onclick,'toggleSendWishlist')]")			WebElement wishlistsend;
+	@FindBy(xpath="//a[contains(@onclick,'orderWishlist')]")				WebElement wishlistorder;
+	@FindBy(xpath="//a[contains(@onclick,'clearWishlist')]")				WebElement wishlistclear;
 	public ProductListPage(WebDriver driver) {
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 		companyName = driver.findElement(logoImage).getAttribute("title");
 	}
 	public void clickMenu() throws Exception{
@@ -66,6 +80,12 @@ public class ProductListPage {
 		//driver.findElement(submainMenu).click();
 		driver.findElement(searchBox).click();*/
 	}
+	public void wishclickMenu() throws Exception{
+		Reporter.log("Navigate to HomePage");
+		wishlistmenuselect();
+	}
+	
+	
 	public void verifySubMenu() throws Exception{
 		//Thread.sleep(2000);
 		clickMenu() ;
@@ -126,7 +146,9 @@ public class ProductListPage {
 	
 	public void menuselect() throws Exception{
 		if(companyName.equals("Netthandelen.no")){
-			driver.findElement(By.xpath("//li[12]/a/span")).click();
+			int siz = driver.findElements(By.xpath("//div[@class='category-level-1']/ul/li")).size();
+			System.out.println("size"+siz);
+			driver.findElement(By.xpath("//li["+siz+"]/a/span")).click();
 			Reporter.log("Click on fixed price link");
 			Thread.sleep(2000);
 		}
@@ -168,11 +190,61 @@ public class ProductListPage {
 		}else{
 		driver.findElement(searchBox).click();}
 		
+		
+		
 		if(companyName.equals("Netthandelen.no")){
 			clickFirstProduct();
 		}else{
 			clickFirstProductnew();}
 	}
+	
+	public void wishlistmenuselect() throws Exception{
+		if(companyName.equals("Netthandelen.no")){
+			int siz = driver.findElements(By.xpath("//div[@class='category-level-1']/ul/li")).size();
+			System.out.println("size"+siz);
+			driver.findElement(By.xpath("//li["+siz+"]/a/span")).click();
+			Reporter.log("Click on fixed price link");
+			Thread.sleep(2000);
+		}
+		
+		int noOfNavCat = driver.findElements(navCategories).size();
+		noOfNavCat=noOfNavCat-1;
+		System.out.println("Navigation Category-" +noOfNavCat );
+		List<WebElement> menulist = driver.findElements(navCategories);
+		Calendar cals = Calendar.getInstance();
+		int currentminutes = cals.get(Calendar.MINUTE);
+		System.out.println("current minute-"+currentminutes);
+		if(currentminutes>1&&currentminutes<noOfNavCat){
+		currentminutes=currentminutes/2;System.out.println("Divide by 2");}
+		if(currentminutes>10&&currentminutes<30){
+		currentminutes=currentminutes/4;System.out.println("Divide by 4");}
+		if(currentminutes>30&&currentminutes<50){
+		currentminutes=currentminutes/5;System.out.println("Divide by 5");}
+		if(currentminutes>50&&currentminutes<59){
+		currentminutes=currentminutes/6;System.out.println("Divide by 6");}
+		System.out.println("After calculation-"+currentminutes);
+		if(currentminutes>=noOfNavCat){
+		noOfNavCat=noOfNavCat/2;	
+		Reporter.log("Clicked on Menu-"+noOfNavCat+"-"+menulist.get(noOfNavCat).getText());
+		menulist.get(noOfNavCat).click();
+			
+		System.out.println("click on menu-"+noOfNavCat);
+		}
+		else{
+			Reporter.log("Clicked on Menu-"+currentminutes+"-"+menulist.get(currentminutes).getText());
+			menulist.get(currentminutes).click();
+			
+			System.out.println("click on menu-"+currentminutes);
+		}
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='product-list-container']/div")));
+		Thread.sleep(1000);
+		if(companyName.equals("Netthandelen.no")){
+			driver.findElement(By.id("input-text-search")).click();
+		}else{
+		driver.findElement(searchBox).click();}
+	}
+	
 	public void clickFirstProduct() throws Exception{
 		Thread.sleep(2000);
 		System.out.println("Now click product");
@@ -195,7 +267,7 @@ public class ProductListPage {
 			System.out.println("click product-" +prodlist );
 			String buybtn;
 			if(companyName.equals("Netthandelen.no")){
-				buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[2]/div[4]/a")).getAttribute("class");	
+				buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[3]/a")).getAttribute("class");	
 			}else{
 			 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[2]/div[5]/a")).getAttribute("class");}
 				System.out.println(buybtn);
@@ -204,26 +276,28 @@ public class ProductListPage {
 			while(!buybtn.equals("button")){
 				prodlist=prodlist+1;
 				if(companyName.equals("Netthandelen.no")){
-					buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[2]/div[4]/a")).getAttribute("class");	
+					buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[3]/a")).getAttribute("class");	
 				}else{
 				 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div[2]/div[3]/div/div[2]/a")).getAttribute("class");}
 				System.out.println("currently out of stock picking next one-"+ prodlist+"-button text-" +buybtn);
 				Thread.sleep(1000);
 			} 
-			driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div/div[@class='product-image']/a")).click();
+			//1804 changes on netthandelen
+			driver.findElement(By.xpath("//div[@class='group-item']["+prodlist+"]/div/div/a")).click();
+			//driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div/div[@class='product-image']/a")).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(addtocart));
 			Thread.sleep(2000);
 			}else{	
 			System.out.println("click on product-" +currentminute );
 			String buybtn="";
 			if(companyName.equals("Netthandelen.no")){
-				 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[2]/div[4]/a")).getAttribute("class");	
+				 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[3]/a")).getAttribute("class");	
 			}else{
 				 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[2]/div[5]/a")).getAttribute("class");}
 			while(!buybtn.equals("button")){
 				currentminute=currentminute+1;
 				if(companyName.equals("Netthandelen.no")){
-					 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[2]/div[4]/a")).getAttribute("class");	
+					 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[3]/a")).getAttribute("class");	
 				}else{
 					 buybtn= driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div[2]/div[5]/a")).getAttribute("class");}
 				System.out.println("currently out of stock picking next one-"+ currentminute+"-button text-" +buybtn);
@@ -236,7 +310,9 @@ public class ProductListPage {
 			}*/
 			System.out.println("click on product image "+currentminute);
 			//driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div/div/a")).click();
-			driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div/div[@class='product-image']/a")).click();
+			//1804 changes on netthandelen
+			driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div/a")).click();
+			//driver.findElement(By.xpath("//div[@class='group-item']["+currentminute+"]/div/div/div[@class='product-image']/a")).click();
 		//driver.findElement(firstProduct).click();
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(addtocart));}
@@ -343,10 +419,7 @@ public class ProductListPage {
 			executor.executeScript("arguments[0].click();", element);
 			}
 			//driver.findElement(By.xpath("//div[@class='group-item product-list-item']["+currentminute+"]/div/a")).click();
-			
-			
-			
-		//driver.findElement(firstProduct).click();
+			//driver.findElement(firstProduct).click();
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(addtocart));
 			}
@@ -380,6 +453,42 @@ public class ProductListPage {
 		System.out.println("cart value- "+cartamt);
 		int cartamount = Integer.parseInt(cartamt.replaceAll("[^0-9]",""));
 		System.out.println("cart value- "+cartamount);
+	}
+	
+	public void wishlisticon() throws Exception{
+		Assert.assertTrue(topwishlisticon.isDisplayed());
+		topwishlisticon.click();
+		Assert.assertTrue(wishlistemail.isDisplayed());
+		Assert.assertTrue(wishlistBtn.isDisplayed());
+		wishlistBtn.click();
+		Reporter.log("Email address validation msg-"+wishlisterror.getText());
+		Thread.sleep(1000);
+		System.out.println("NOT yet click wish");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+		//topwishlisticon.click();
+		Thread.sleep(1000);
+		System.out.println("click wish");
+	}
+	
+	public void wishlistonproductlist(String uemail) throws Exception{
+		int tprodlist = driver.findElements(By.xpath("//div[@id='product-list-container']/div")).size();
+		System.out.println("Number of product -" +tprodlist);
+		for(int j =tprodlist-2;j<=tprodlist;j++){
+			WebElement element  = driver.findElement(By.xpath("//div[@class='group-item product-list-item']["+j+"]/div/div[2]/div/div/a"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
+			Thread.sleep(1000);
+			wishlistemailadd.clear();
+			wishlistemailadd.sendKeys(uemail);
+			wishemailaddbtn.click();
+			Thread.sleep(1000);
+		}
+		topwishlisticon.click();
+		Assert.assertTrue(wishlisturl.isDisplayed(),"Wishlist URL button present");
+		Assert.assertTrue(wishlistsend.isDisplayed(), "Wishlist send button present");
+		Assert.assertTrue(wishlistorder.isDisplayed(), "Wishlist order button present");
+		wishlistclear.click();
 	}
 	
 	public void checkimage() throws Exception{

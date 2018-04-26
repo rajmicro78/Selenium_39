@@ -135,7 +135,7 @@ public class LivePage extends TestBaseSetup {
 			driver.findElement(By.xpath("//div[@id='cookieInfoBannerControls']/p/a")).click();
 		}*/
 		Reporter.log("Verify fields in Checkout form");
-		
+		//Assert.assertTrue(verifyobjectpresent(chkfnameTxtFld), "First name field not visible");
 		Assert.assertTrue(verifyobjectpresent(chkfnameTxtFld));
 		Reporter.log("First Name Field -"+verifyobjectpresent(chkfnameTxtFld));
 		Assert.assertTrue(verifyobjectpresent(chklnameTxtFld));
@@ -153,6 +153,7 @@ public class LivePage extends TestBaseSetup {
 		
 		Assert.assertTrue(verifyobjectpresent(chkemailTxtFld));
 		Reporter.log("Email Field -"+verifyobjectpresent(chkemailTxtFld));
+		chkemailTxtFld.clear();
 		chkemailTxtFld.sendKeys(uemail);
 		guestchkoutBtn.click();
 		
@@ -203,7 +204,7 @@ public class LivePage extends TestBaseSetup {
 	
 	
 	//public void readExcel(String filePath,String fileName,String sheetName) throws IOException{
-		public void readExcel() throws IOException{
+		public static String[] readExcel() throws IOException{
 	    //Create an object of File class to open xlsx file
 		String filePath= "D:";
 		String fileName ="excelread.xlsx";
@@ -222,20 +223,26 @@ public class LivePage extends TestBaseSetup {
 	    }
 	    Sheet guru99Sheet = guru99Workbook.getSheet(sheetName);
 	    int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
-	    for (int i = 0; i < rowCount+1; i++) {
+	    int colCount=guru99Sheet.getRow(1).getLastCellNum();
+	    System.out.println("RC-"+ colCount);
+	    String str[] = new String[colCount];
+	    for (int i = 1; i < rowCount+1; i++) {
 	        Row row = guru99Sheet.getRow(i);
+	      
+	        System.out.println("row"+row.getLastCellNum());
 	        for (int j = 0; j < row.getLastCellNum(); j++) {
-	        	String str;
+	        	
 	         
 	        	if(row.getCell(j).getCellType() == Cell.CELL_TYPE_NUMERIC) {
-	        	     str = NumberToTextConverter.toText(row.getCell(j).getNumericCellValue());
+	        	     str[j] = NumberToTextConverter.toText(row.getCell(j).getNumericCellValue());
 	        	}else{
-	        		 str= row.getCell(j).getStringCellValue();
+	        		 str[j]= row.getCell(j).getStringCellValue();
 	        	}
-	        	System.out.print(str+"|| ");
+	        	System.out.print(str[j]+"|| ");
 	        }
 	        System.out.println();
 	    }
+	    return str;
 	}
 	public boolean verifyobjectpresent(WebElement objname){
 		boolean objpresent = objname.isDisplayed();

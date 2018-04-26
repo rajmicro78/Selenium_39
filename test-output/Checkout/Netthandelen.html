@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Netthandelen</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 12 14:53:49 IST 2018</td>
+<td>Started on:</td><td>Mon Apr 23 15:00:28 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>174 seconds (174024 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2079 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,59 +67,147 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card<br/>
-<a href="#Output-248710794" onClick='toggleBox("Output-248710794", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-248710794" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-248710794">
-Navigate to HomePage<br/>
-Click on fixed price link<br/>
-Clicked on Menu-1-RESERVEDELER<br/>
-Product Final Price- kr 990,00<br/>
-Product add to cart- 2<br/>
-Payment section-true<br/>
-Card Payment Selected<br/>
-Card Master Payment <br/>
-Master Card Number- 5413000000000000<br/>
-Master Card Expiry- 2020<br/>
-Master Card CVV- 786<br/>
-Master Ok Button<br/>
-Final Order Number- 16208402<br/>
-</div>
-</td>
-<td></td>
-<td>79</td>
-<td>src.com.pack.common.tests.CheckOutPageTest@4671e53b</td></tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.initializeTestBaseSetup()'><b>initializeTestBaseSetup</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2142080121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2142080121'><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment<br/>
-<a href="#Output-1073741635" onClick='toggleBox("Output-1073741635", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1073741635" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1073741635">
-Navigate to HomePage<br/>
-Click on fixed price link<br/>
-Clicked on Menu-1-RESERVEDELER<br/>
-Product Final Price- kr 199,00<br/>
-Product add to cart- 2<br/>
-Collector Payment Selected<br/>
-Collector First Name-Tester<br/>
-Collector Last Name- Person<br/>
-Collector Address-Startveien 56<br/>
-Collector Zipcode- 9300<br/>
-Final Order Number- 16208403<br/>
-</div>
-</td>
+<td title='src.com.pack.common.tests.CheckOutPageTest.setUp()'><b>setUp</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest</td>
 <td></td>
-<td>55</td>
-<td>src.com.pack.common.tests.CheckOutPageTest@4671e53b</td></tr>
+<td>0</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.tearDown()'><b>tearDown</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest</td>
+<td></td>
+<td>0</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1684792003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1684792003'><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1931444790", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1931444790'><pre>org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
 </table><p>
 </body>
 </html>

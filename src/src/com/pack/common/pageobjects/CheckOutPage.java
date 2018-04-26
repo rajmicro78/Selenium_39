@@ -503,13 +503,17 @@ public class CheckOutPage {
 		paymentMethodSelection("PayPal");
 		
 		submitbtn();
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		System.out.println("in Paypal");
 		Reporter.log("Paypal payment Method");
 		// WebDriverWait wait = new WebDriverWait(driver,30);
+		//driver.switchTo().frame("injectedUl");
 		
-		 
-		 boolean paypaliframe = driver.findElements( By.name("login_email") ).size() != 0;
+		//---1804 changes in element changes login_email to Injected UI-----//
+		// boolean paypaliframe = driver.findElements( By.name("login_email") ).size() != 0;
+		 boolean paypaliframe = driver.findElements( By.name("injectedUl") ).size() != 0;
+		 System.out.println("paypal"+paypaliframe);
+		 Thread.sleep(5000);
 		// boolean paypalpas = driver.findElements( By.name("login_password") ).size() != 0;
 		/* if(paypaliframe && paypalpas){
 			 Thread.sleep(2000);
@@ -544,11 +548,13 @@ public class CheckOutPage {
 			    
 		 } else */if(paypaliframe ){
 			Thread.sleep(2000);
+			driver.switchTo().frame("injectedUl");
 			driver.findElement(By.name("login_email")).clear();
 		    driver.findElement(By.name("login_email")).sendKeys(paypal);
 		    Reporter.log("Paypal Email- "+paypal );
-		    driver.findElement(By.id("btnNext")).click();
-		    Thread.sleep(15000);
+		   //-----------1804 changes comenting btnnext--------------//
+		    //driver.findElement(By.id("btnNext")).click();
+		    //Thread.sleep(15000);
 		    driver.findElement(By.name("login_password")).clear();
 		    driver.findElement(By.name("login_password")).sendKeys(paypalpass);
 		    Reporter.log("Paypal Password- "+paypalpass );
@@ -607,14 +613,11 @@ public class CheckOutPage {
 	    driver.findElement(By.id("btnLogin")).click();
 	    System.out.println("Clicked Login Button");
 	    Reporter.log("Paypal Submit Button");
-		
 		Thread.sleep(15000);
 		System.out.println("Waiting 15000");
-		
 		//boolean paypacn = driver.findElements(By.id("confirmButtonTop") ).size() != 0;
 		//System.out.println("confirm" +paypacn);
 		//if(paypacn){
-		
 	    System.out.println("into another");
 	    //driver.switchTo().frame(0);
 	   // WebDriverWait wait = new WebDriverWait(driver,30);

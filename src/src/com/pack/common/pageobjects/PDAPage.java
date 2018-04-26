@@ -60,6 +60,7 @@ public class PDAPage extends TestBaseSetup {
 				driver.findElement(By.id("cphMain_btn2")).click();
 				int noofproduct = driver.findElements(By.xpath("//table/tbody/tr[@class='bundlePickingDataStatusId2']")).size();
 				driver.findElement(By.id("cphMain_btn1")).click();
+				Thread.sleep(500);
 				System.out.println("No of product -"+noofproduct);
 				for(int y=1;y<=noofproduct;y++){
 					driver.findElement(By.id("cphMain_btnConfirmPicking")).click();

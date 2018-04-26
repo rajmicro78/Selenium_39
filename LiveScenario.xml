@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Live Site Testing" >
 <test name="BliVakker" verbose="1">
+   		
    		<parameter name="sitename" value="BV"/>
-  	
+   		
   	<classes>
 		<class name="src.com.pack.common.tests.LiveTest"/>					                                             	
 	</classes>

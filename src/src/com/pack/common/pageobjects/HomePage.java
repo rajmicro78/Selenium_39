@@ -1,4 +1,5 @@
 package src.com.pack.common.pageobjects;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ public class HomePage {
 	WebDriver driver;
 	String companyName;
 	String appURL;
+	
 	@FindBy(xpath="//h2[@class='site-logo']/a")								WebElement logoImage;
 	@FindBy(id="txt-search") 												WebElement searchBox;
 	@FindBy(xpath="//div[contains(@class,'is-search')]/button") 			WebElement searchButton;
@@ -178,6 +180,16 @@ public class HomePage {
 	}
 	public TicketCreation goticket(){
 		return new TicketCreation(driver);
+	}
+	
+	public void getdatafromexcel() throws Exception{
+		System.out.println("Into read data from excel");
+		String[] val = LivePage.readExcel();
+		System.out.println(val.length);
+		for(int j=0;j<=val.length-1;j++){
+			System.out.println("Into Home Page Read -"+val[j]);
+		}
+		
 	}
 	public ProductListPage listMenu(){
 		return new ProductListPage(driver);

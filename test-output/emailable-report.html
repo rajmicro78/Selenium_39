@@ -8,18 +8,319 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Live Site Testing</th></tr>
-<tr><td><a href="#t0">CP-Finland</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">100,189</td><td></td><td>HomePage, Registration, Search</td></tr>
+<tr><th colspan="7">Checkout</th></tr>
+<tr><td><a href="#t0">Netthandelen</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">2,079</td><td></td><td>dankort, masterpass, easypayment, bankaxess, gmastercard, trustly, visacard, paypal, sofort, prepayment</td></tr>
+<tr class="stripe"><td><a href="#t1">CP-Finland</a></td><td class="num">0</td><td class="num attn">5</td><td class="num">0</td><td class="num">5,019</td><td></td><td>dankort, masterpass, easypayment, bankaxess, paypal, sofort, prepayment</td></tr>
+<tr><td><a href="#t2">BliVakker</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num">6,018</td><td></td><td>dankort, masterpass, easypayment, trustly, paypal, sofort</td></tr>
+<tr class="stripe"><td><a href="#t3">CP-Germany</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num">6,021</td><td></td><td>dankort, easypayment, masterpass, bankaxess, trustly, prepayment</td></tr>
+<tr><td><a href="#t4">CP-Denmark</a></td><td class="num">0</td><td class="num attn">4</td><td class="num">0</td><td class="num">4,010</td><td></td><td>masterpass, easypayment, bankaxess, trustly, paypal, collector, sofort, prepayment</td></tr>
+<tr class="stripe"><td><a href="#t5">CP-Sweden</a></td><td class="num">0</td><td class="num attn">5</td><td class="num">0</td><td class="num">5,012</td><td></td><td>dankort, masterpass, easypayment, bankaxess, paypal, sofort, prepayment</td></tr>
+<tr><td><a href="#t6">Brandsdal</a></td><td class="num">0</td><td class="num attn">5</td><td class="num">0</td><td class="num">5,012</td><td></td><td>dankort, masterpass, easypayment, bankaxess, trustly, paypal, sofort</td></tr>
+<tr class="stripe"><td><a href="#t7">CP-Austria</a></td><td class="num">0</td><td class="num attn">4</td><td class="num">0</td><td class="num">4,011</td><td></td><td>dankort, easypayment, masterpass, bankaxess, trustly, paypal, prepayment, collector</td></tr>
+<tr><th colspan="7">PDA Bundling</th></tr>
+<tr><td><a href="#t8">CP-Finland</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">999</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t9">CP-Sweden</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">982</td><td></td><td></td></tr>
+<tr><td><a href="#t10">Brandsdal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">997</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t11">BliVakker</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,010</td><td></td><td></td></tr>
+<tr><td><a href="#t12">CP-Austria</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,004</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t13">CP-Germany</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,006</td><td></td><td></td></tr>
+<tr><td><a href="#t14">CP-Denmark</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,005</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t15">Netthandelen</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,003</td><td></td><td></td></tr>
 <tr><th colspan="7">Fixed Price Test Suite</th></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">45</th><th class="num">0</th><th class="num">45,188</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Live Site Testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CP-Finland &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.LiveTest</td><td><a href="#m0">checkout</a></td><td rowspan="1">1523869146494</td><td rowspan="1">10218</td></tr><tr><th colspan="4">CP-Finland &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">src.com.pack.common.tests.LiveTest</td><td><a href="#m1">cartpage</a></td><td rowspan="1">1523869125430</td><td rowspan="1">21063</td></tr><tr class="passedeven"><td><a href="#m2">productList</a></td><td rowspan="1">1523869098678</td><td rowspan="1">26436</td></tr><tr class="passedeven"><td><a href="#m3">productdetail</a></td><td rowspan="1">1523869125120</td><td rowspan="1">308</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Checkout</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Netthandelen &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m0">initializeTestBaseSetup</a></td><td rowspan="1">1524475828962</td><td rowspan="1">0</td></tr><tr><th colspan="4">Netthandelen &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m1">setUp</a></td><td rowspan="1">1524475828997</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">tearDown</a></td><td rowspan="1">1524475831032</td><td rowspan="1">0</td></tr><tr><th colspan="4">Netthandelen &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m3">loggedinuserCheckout</a></td><td rowspan="1">1524475829023</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">loggedinuserCollector</a></td><td rowspan="1">1524475830030</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">CP-Finland &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m5">initializeTestBaseSetup</a></td><td rowspan="1">1524475831378</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Finland &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m6">setUp</a></td><td rowspan="1">1524475831380</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m7">tearDown</a></td><td rowspan="1">1524475836394</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Finland &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="5">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m8">guestCheckout</a></td><td rowspan="1">1524475831383</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">loggedinuserCheckout</a></td><td rowspan="1">1524475833387</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m10">loggedinuserCollector</a></td><td rowspan="1">1524475834389</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m11">loggedinuserTrustly</a></td><td rowspan="1">1524475835391</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m12">mastercguest</a></td><td rowspan="1">1524475832385</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">BliVakker &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m13">initializeTestBaseSetup</a></td><td rowspan="1">1524475836419</td><td rowspan="1">0</td></tr><tr><th colspan="4">BliVakker &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m14">setUp</a></td><td rowspan="1">1524475836422</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m15">tearDown</a></td><td rowspan="1">1524475842434</td><td rowspan="1">0</td></tr><tr><th colspan="4">BliVakker &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="6">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m16">guestBankaxess</a></td><td rowspan="1">1524475837424</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m17">guestCheckout</a></td><td rowspan="1">1524475838426</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m18">guestPrepayment</a></td><td rowspan="1">1524475836423</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m19">loggedinuserCheckout</a></td><td rowspan="1">1524475840430</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m20">loggedinuserCollector</a></td><td rowspan="1">1524475841432</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m21">mastercguest</a></td><td rowspan="1">1524475839428</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">CP-Germany &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m22">initializeTestBaseSetup</a></td><td rowspan="1">1524475842471</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Germany &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m23">setUp</a></td><td rowspan="1">1524475842473</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m24">tearDown</a></td><td rowspan="1">1524475848489</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Germany &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="6">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m25">guestCheckout</a></td><td rowspan="1">1524475842474</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m26">loggedinuserCheckout</a></td><td rowspan="1">1524475844477</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m27">loggedinuserCollector</a></td><td rowspan="1">1524475847487</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m28">loggedinuserpaypal</a></td><td rowspan="1">1524475846486</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m29">loggedinusersofort</a></td><td rowspan="1">1524475845483</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m30">mastercguest</a></td><td rowspan="1">1524475843475</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">CP-Denmark &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m31">initializeTestBaseSetup</a></td><td rowspan="1">1524475848533</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Denmark &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m32">setUp</a></td><td rowspan="1">1524475848535</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m33">tearDown</a></td><td rowspan="1">1524475852542</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Denmark &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="4">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m34">guestCheckout</a></td><td rowspan="1">1524475848537</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m35">loggedinuserCheckout</a></td><td rowspan="1">1524475850538</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m36">loggedinuserDankort</a></td><td rowspan="1">1524475851541</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m37">mastercguest</a></td><td rowspan="1">1524475849537</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">CP-Sweden &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m38">initializeTestBaseSetup</a></td><td rowspan="1">1524475852581</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Sweden &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m39">setUp</a></td><td rowspan="1">1524475852582</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m40">tearDown</a></td><td rowspan="1">1524475857591</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Sweden &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="5">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m41">guestCheckout</a></td><td rowspan="1">1524475852583</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m42">loggedinuserCheckout</a></td><td rowspan="1">1524475854586</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m43">loggedinuserCollector</a></td><td rowspan="1">1524475855588</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m44">loggedinuserTrustly</a></td><td rowspan="1">1524475856590</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m45">mastercguest</a></td><td rowspan="1">1524475853584</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">Brandsdal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m46">initializeTestBaseSetup</a></td><td rowspan="1">1524475857730</td><td rowspan="1">0</td></tr><tr><th colspan="4">Brandsdal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m47">setUp</a></td><td rowspan="1">1524475857733</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m48">tearDown</a></td><td rowspan="1">1524475862739</td><td rowspan="1">0</td></tr><tr><th colspan="4">Brandsdal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="5">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m49">guestCheckout</a></td><td rowspan="1">1524475858735</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m50">guestPrepayment</a></td><td rowspan="1">1524475857734</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m51">loggedinuserCheckout</a></td><td rowspan="1">1524475860737</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m52">loggedinuserCollector</a></td><td rowspan="1">1524475861738</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m53">mastercguest</a></td><td rowspan="1">1524475859736</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">CP-Austria &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m54">initializeTestBaseSetup</a></td><td rowspan="1">1524475862759</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Austria &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m55">setUp</a></td><td rowspan="1">1524475862760</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m56">tearDown</a></td><td rowspan="1">1524475866768</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Austria &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="4">src.com.pack.common.tests.CheckOutPageTest</td><td><a href="#m57">guestCheckout</a></td><td rowspan="1">1524475862761</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m58">loggedinuserCheckout</a></td><td rowspan="1">1524475864765</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m59">loggedinusersofort</a></td><td rowspan="1">1524475865767</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m60">mastercguest</a></td><td rowspan="1">1524475863762</td><td rowspan="1">0</td></tr></tbody>
+<tbody><tr><th colspan="4">PDA Bundling</th></tr></tbody><tbody id="t8"><tr><th colspan="4">CP-Finland &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m61">initializeTestBaseSetup</a></td><td rowspan="1">1524475866791</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Finland &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m62">setUp</a></td><td rowspan="1">1524475866792</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m63">tearDown</a></td><td rowspan="1">1524475867788</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Finland &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m64">PDAChecking</a></td><td rowspan="1">1524475866795</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t9"><tr><th colspan="4">CP-Sweden &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m65">initializeTestBaseSetup</a></td><td rowspan="1">1524475867835</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Sweden &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m66">setUp</a></td><td rowspan="1">1524475867836</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m67">tearDown</a></td><td rowspan="1">1524475868815</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Sweden &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m68">PDAChecking</a></td><td rowspan="1">1524475867837</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t10"><tr><th colspan="4">Brandsdal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m69">initializeTestBaseSetup</a></td><td rowspan="1">1524475868853</td><td rowspan="1">0</td></tr><tr><th colspan="4">Brandsdal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m70">setUp</a></td><td rowspan="1">1524475868854</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m71">tearDown</a></td><td rowspan="1">1524475869847</td><td rowspan="1">0</td></tr><tr><th colspan="4">Brandsdal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m72">PDAChecking</a></td><td rowspan="1">1524475868855</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t11"><tr><th colspan="4">BliVakker &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m73">initializeTestBaseSetup</a></td><td rowspan="1">1524475869860</td><td rowspan="1">0</td></tr><tr><th colspan="4">BliVakker &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m74">setUp</a></td><td rowspan="1">1524475869865</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m75">tearDown</a></td><td rowspan="1">1524475870869</td><td rowspan="1">0</td></tr><tr><th colspan="4">BliVakker &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m76">PDAChecking</a></td><td rowspan="1">1524475869866</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t12"><tr><th colspan="4">CP-Austria &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m77">initializeTestBaseSetup</a></td><td rowspan="1">1524475870886</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Austria &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m78">setUp</a></td><td rowspan="1">1524475870887</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m79">tearDown</a></td><td rowspan="1">1524475871888</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Austria &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m80">PDAChecking</a></td><td rowspan="1">1524475870888</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t13"><tr><th colspan="4">CP-Germany &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m81">initializeTestBaseSetup</a></td><td rowspan="1">1524475872016</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Germany &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m82">setUp</a></td><td rowspan="1">1524475872018</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m83">tearDown</a></td><td rowspan="1">1524475873020</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Germany &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m84">PDAChecking</a></td><td rowspan="1">1524475872019</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t14"><tr><th colspan="4">CP-Denmark &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m85">initializeTestBaseSetup</a></td><td rowspan="1">1524475873041</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Denmark &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m86">setUp</a></td><td rowspan="1">1524475873042</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m87">tearDown</a></td><td rowspan="1">1524475874044</td><td rowspan="1">0</td></tr><tr><th colspan="4">CP-Denmark &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m88">PDAChecking</a></td><td rowspan="1">1524475873044</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t15"><tr><th colspan="4">Netthandelen &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m89">initializeTestBaseSetup</a></td><td rowspan="1">1524475874078</td><td rowspan="1">0</td></tr><tr><th colspan="4">Netthandelen &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">src.com.pack.common.tests.PDATest</td><td><a href="#m90">setUp</a></td><td rowspan="1">1524475874079</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m91">tearDown</a></td><td rowspan="1">1524475875080</td><td rowspan="1">0</td></tr><tr><th colspan="4">Netthandelen &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">src.com.pack.common.tests.PDATest</td><td><a href="#m92">PDAChecking</a></td><td rowspan="1">1524475874080</td><td rowspan="1">0</td></tr></tbody>
 <tbody><tr><th colspan="4">Fixed Price Test Suite</th></tr></tbody></table>
-<h2>CP-Finland</h2><h3 id="m0">src.com.pack.common.tests.LiveTest#checkout</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Verify fields in registration form</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at src.com.pack.common.pageobjects.LivePage.verifycheckoutpage(LivePage.java:101)
-	at src.com.pack.common.tests.LiveTest.checkout(LiveTest.java:233)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">src.com.pack.common.tests.LiveTest#cartpage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Product Final Price- 8,30 €<br/>Product add to cart- 2<br/>Total Qty-2 ,Amount-Yhteensä 19,60 €<br/>Checkout Button Clicked<br/>Offer Available<br/>Click Checkout button from Offer page<br/>Email Enterered- rajeev-12-apr@netthandelen.no</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">src.com.pack.common.tests.LiveTest#productList</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Navigate to HomePage<br/>Clicked on Menu-7-OUTLET<br/>Product Location-14- Product Name -Max Factor CC Colour Corrector – Highlighter</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">src.com.pack.common.tests.LiveTest#productdetail</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Product Name-CC Colour Corrector – Highlighter<br/>Wishlist button present<br/>Final  Rating-<br/>Description Displaying<br/>Product Image Displaying<br/>Review button Displaying<br/>Sale Price Displaying<br/>Qty dropdown Displaying<br/>Add to cart  button Displaying</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Netthandelen</h2><h3 id="m0">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Finland</h2><h3 id="m5">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">src.com.pack.common.tests.CheckOutPageTest#loggedinuserTrustly</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BliVakker</h2><h3 id="m13">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">src.com.pack.common.tests.CheckOutPageTest#guestBankaxess</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">src.com.pack.common.tests.CheckOutPageTest#guestPrepayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Germany</h2><h3 id="m22">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">src.com.pack.common.tests.CheckOutPageTest#loggedinuserpaypal</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">src.com.pack.common.tests.CheckOutPageTest#loggedinusersofort</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Denmark</h2><h3 id="m31">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">src.com.pack.common.tests.CheckOutPageTest#loggedinuserDankort</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Sweden</h2><h3 id="m38">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">src.com.pack.common.tests.CheckOutPageTest#loggedinuserTrustly</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Brandsdal</h2><h3 id="m46">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">src.com.pack.common.tests.CheckOutPageTest#guestPrepayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCollector</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Austria</h2><h3 id="m54">src.com.pack.common.tests.CheckOutPageTest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m55">src.com.pack.common.tests.CheckOutPageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m56">src.com.pack.common.tests.CheckOutPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m57">src.com.pack.common.tests.CheckOutPageTest#guestCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m58">src.com.pack.common.tests.CheckOutPageTest#loggedinuserCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m59">src.com.pack.common.tests.CheckOutPageTest#loggedinusersofort</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m60">src.com.pack.common.tests.CheckOutPageTest#mastercguest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\checkout.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Finland</h2><h3 id="m61">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m62">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m63">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m64">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Sweden</h2><h3 id="m65">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m66">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m67">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m68">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Brandsdal</h2><h3 id="m69">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m70">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m71">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m72">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BliVakker</h2><h3 id="m73">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m74">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m75">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m76">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Austria</h2><h3 id="m77">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m78">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m79">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m80">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Germany</h2><h3 id="m81">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m82">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m83">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m84">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CP-Denmark</h2><h3 id="m85">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m86">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m87">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m88">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Netthandelen</h2><h3 id="m89">src.com.pack.common.tests.PDATest#initializeTestBaseSetup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m90">src.com.pack.common.tests.PDATest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m91">src.com.pack.common.tests.PDATest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m92">src.com.pack.common.tests.PDATest#PDAChecking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;env&apos; is required by BeforeClass on method initializeTestBaseSetup but has not been marked @Optional or defined
+in C:\Users\rajeev.singh\workspace\Selenium_39\PDA.xml
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
