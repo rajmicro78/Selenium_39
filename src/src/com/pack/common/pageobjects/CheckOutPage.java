@@ -594,8 +594,8 @@ public class CheckOutPage {
 		}else{
 		
 			
-		driver.switchTo().frame("injectedUl");
-		System.out.println("switched to frame");
+		//driver.switchTo().frame("injectedUl");
+		System.out.println("switched to without frame");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		boolean paypalf = driver.findElements(By.xpath("//div[@id='login_emaildiv']/div/input") ).size() != 0;
 		System.out.println(paypalf);
@@ -627,7 +627,41 @@ public class CheckOutPage {
 	    JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", element1);
 		 Reporter.log("Paypal Confirm Button");
+		}else{
+			//Rajeev - Newly added on 2-may-18 
+			System.out.println("Newly added Paypal Code");
+			driver.findElement(By.name("login_email")).clear();
+		    driver.findElement(By.name("login_email")).sendKeys(paypal);
+		    Reporter.log("Paypal Email- "+paypal );
+		   //-----------1804 changes comenting btnnext--------------//
+		    //driver.findElement(By.id("btnNext")).click();
+		    //Thread.sleep(15000);
+		    driver.findElement(By.name("login_password")).clear();
+		    driver.findElement(By.name("login_password")).sendKeys(paypalpass);
+		    Reporter.log("Paypal Password- "+paypalpass );
+		    driver.findElement(By.id("submitLogin")).click();
+		    Reporter.log("Paypal Submit Button");
+		  
+		    
+		    Thread.sleep(25000);
+			System.out.println("Waiting 15000");
+			
+			//boolean paypacn = driver.findElements(By.id("confirmButtonTop") ).size() != 0;
+			//System.out.println("confirm" +paypacn);
+			//if(paypacn){
+			
+		    System.out.println("into another");
+		    //driver.switchTo().frame(0);
+		   // WebDriverWait wait = new WebDriverWait(driver,30);
+		  //  WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("confirmButtonTop")));
+		    WebElement element1 =driver.findElement(By.id("continue"));
+		    //element1.click();
+		    JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element1);
+			 Reporter.log("Paypal Confirm Button");
+		    
 		}
+			
 	    //driver.findElement(By.id("confirmButtonTop")).click();}
 	    Thread.sleep(2000);}
 		//}

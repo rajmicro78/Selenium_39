@@ -47,6 +47,7 @@ public class ProductListPage {
 	@FindBy(xpath="//a[contains(@onclick,'toggleSendWishlist')]")			WebElement wishlistsend;
 	@FindBy(xpath="//a[contains(@onclick,'orderWishlist')]")				WebElement wishlistorder;
 	@FindBy(xpath="//a[contains(@onclick,'clearWishlist')]")				WebElement wishlistclear;
+	@FindBy(id="wishlistConfirmSendEmail") 									WebElement wishlistoutofstockconfirmemail;
 	public ProductListPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -482,6 +483,11 @@ public class ProductListPage {
 			wishlistemailadd.clear();
 			wishlistemailadd.sendKeys(uemail);
 			wishemailaddbtn.click();
+			Thread.sleep(300);
+			if(wishlistoutofstockconfirmemail.isDisplayed()){
+				wishlistoutofstockconfirmemail.click();
+				Thread.sleep(1000);
+			}
 			Thread.sleep(1000);
 		}
 		topwishlisticon.click();

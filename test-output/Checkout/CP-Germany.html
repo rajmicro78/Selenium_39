@@ -55,282 +55,18 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>CP-Germany</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 25 15:40:35 IST 2018</td>
+<td>Started on:</td><td>Wed May 02 10:40:04 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>105 seconds (105089 ms)</td>
+<tr><td>Total time:</td><td>540 seconds (540612 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
-<td>Excluded groups:</td><td>dankort easypayment masterpass bankaxess gmastercard trustly prepayment sofort </td>
+<td>Excluded groups:</td><td>dankort easypayment masterpass bankaxess trustly prepayment </td>
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card<br/>
-<a href="#Output-1081769770" onClick='toggleBox("Output-1081769770", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1081769770" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1081769770">
-Navigate to HomePage<br/>
-Clicked on Menu-8-AUSVERKAUF<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
-from tab crashed
-  (Session info: chrome=65.0.3325.181)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-*** Element info: {Using=xpath, value=//div[@id=&apos;product-list-container&apos;]/div}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:477)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at src.com.pack.common.pageobjects.ProductListPage.clickFirstProductnew(ProductListPage.java:273)
-	at src.com.pack.common.pageobjects.ProductListPage.menuselect(ProductListPage.java:193)
-	at src.com.pack.common.pageobjects.ProductListPage.clickMenu(ProductListPage.java:75)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout(CheckOutPageTest.java:122)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1081769770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1081769770'><pre>org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
-from tab crashed
-  (Session info: chrome=65.0.3325.181)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-*** Element info: {Using=xpath, value=//div[@id=&apos;product-list-container&apos;]/div}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:477)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at src.com.pack.common.pageobjects.ProductListPage.clickFirstProductnew(ProductListPage.java:273)
-	at src.com.pack.common.pageobjects.ProductListPage.menuselect(ProductListPage.java:193)
-	at src.com.pack.common.pageobjects.ProductListPage.clickMenu(ProductListPage.java:75)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout(CheckOutPageTest.java:122)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>18</td>
-<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
-<tr>
-<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:912)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector(CheckOutPageTest.java:258)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1652764753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1652764753'><pre>org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:912)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector(CheckOutPageTest.java:258)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
-<tr>
-<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserpaypal()'><b>loggedinuserpaypal</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user checkout with PayPal Payment method</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:912)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserpaypal(CheckOutPageTest.java:206)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace79644918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace79644918'><pre>org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:11:12.151Z&apos;
-System info: host: &apos;DPCD-D6M98R1&apos;, ip: &apos;10.11.16.104&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\RAJEEV~1.SIN\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: fd4a321c68a9cbaaddec1e7d7b035b51
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:912)
-	at src.com.pack.common.tests.CheckOutPageTest.loggedinuserpaypal(CheckOutPageTest.java:206)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1183)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -350,7 +86,7 @@ Product add to cart- 2<br/>
 Total Qty-2 ,Amount-Gesamtbetrag 20,00 €<br/>
 Checkout Button Clicked<br/>
 Offer Available<br/>
-Email Enterered- rajeev-25-apr@netthandelen.no<br/>
+Email Enterered- rajeev-2-may@netthandelen.no<br/>
 Click on Guest Chekout Button<br/>
 Enter Zip Code -68159 <br/>
 Enter Mobile Number -01512345690 <br/>
@@ -365,11 +101,151 @@ Visa Card Number-4925000000000004<br/>
 Visa Card Expiry-2020<br/>
 Visa CVV-786<br/>
 Visa Ok Button Clicked<br/>
-Final Order Number- 16208596<br/>
+Final Order Number- 16296151<br/>
 </div>
 </td>
 <td></td>
-<td>59</td>
+<td>63</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCheckout()'><b>loggedinuserCheckout</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user Apply Gift certificate and pay Master card<br/>
+<a href="#Output-44559647" onClick='toggleBox("Output-44559647", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-44559647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-44559647">
+Navigate to HomePage<br/>
+Clicked on Menu-8-AUSVERKAUF<br/>
+Product Location-26- Product Name -NYX Professional Makeup Lip Primer, Deep Nude LPR02<br/>
+Product Final Price- 6,95 €<br/>
+Product add to cart- 2<br/>
+Gift Certificate applied-CPDEdabe221319<br/>
+Total Qty-2 ,Amount-Gesamtbetrag 7,40 €<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Payment section-true<br/>
+Card Payment Selected<br/>
+Card Master Payment <br/>
+Master Card Number- 5413000000000000<br/>
+Master Card Expiry- 2020<br/>
+Master Card CVV- 786<br/>
+Master Ok Button<br/>
+Final Order Number- 16296156<br/>
+</div>
+</td>
+<td></td>
+<td>78</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserCollector()'><b>loggedinuserCollector</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user with collector payment<br/>
+<a href="#Output-1692885405" onClick='toggleBox("Output-1692885405", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1692885405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1692885405">
+Navigate to HomePage<br/>
+Clicked on Menu-9-TOPSELLER<br/>
+Product Location-26- Product Name -NYX Professional Makeup Contour & Highlight Pro Palette HCPP01<br/>
+Product Final Price- 19,95 €<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Gesamtbetrag 39,90 €<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Collector Payment Selected<br/>
+Collector Day- 10<br/>
+Collector Month- 02<br/>
+Collector Year- 1970<br/>
+Collector First Name- Emro<br/>
+Collector Last Name- Djordjev<br/>
+Collector Address- Dörperfeld 7<br/>
+Collector Zipcode- 42555<br/>
+Final Order Number- 16296163<br/>
+</div>
+</td>
+<td></td>
+<td>78</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinuserpaypal()'><b>loggedinuserpaypal</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user checkout with PayPal Payment method<br/>
+<a href="#Output-1916700921" onClick='toggleBox("Output-1916700921", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1916700921" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1916700921">
+Navigate to HomePage<br/>
+Clicked on Menu-9-TOPSELLER<br/>
+Product Location-7- Product Name -Redken Extreme Shampoo 300ml<br/>
+Product Final Price- 12,49 €<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Gesamtbetrag 24,98 €<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Paypal Payment Selected<br/>
+Paypal payment Method<br/>
+Paypal Email- service-buyer@cocopanda.de<br/>
+Paypal Password- @2$BlHWl83bb<br/>
+Paypal Submit Button<br/>
+Paypal Confirm Button<br/>
+Final Order Number- 16296160<br/>
+</div>
+</td>
+<td></td>
+<td>157</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.loggedinusersofort()'><b>loggedinusersofort</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Registered user checkout with Sofort Payment method<br/>
+<a href="#Output-749927456" onClick='toggleBox("Output-749927456", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-749927456" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-749927456">
+Navigate to HomePage<br/>
+Clicked on Menu-8-AUSVERKAUF<br/>
+Product Location-2- Product Name -theBalm Meet Matt(e) Hughes, Romantic<br/>
+Product Final Price- 7,66 €<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Gesamtbetrag 18,82 €<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Sofort Payment Selected<br/>
+Sofort Bank Code-88888888<br/>
+Sofort User Id-88888888<br/>
+Sofort Pin-9300<br/>
+Sofort Transaction Number-85475<br/>
+Final Order Number- 16296158<br/>
+</div>
+</td>
+<td></td>
+<td>73</td>
+<td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
+<tr>
+<td title='src.com.pack.common.tests.CheckOutPageTest.mastercguest()'><b>mastercguest</b><br>Test class: src.com.pack.common.tests.CheckOutPageTest<br>Test method: Guest Checkout with Card Master Payment<br/>
+<a href="#Output-1081769770" onClick='toggleBox("Output-1081769770", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1081769770" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1081769770">
+Navigate to HomePage<br/>
+Clicked on Menu-8-AUSVERKAUF<br/>
+Product Location-17- Product Name -theBalm Photobalm Powder Foundation, Medium<br/>
+Product Final Price- 8,62 €<br/>
+Product add to cart- 2<br/>
+Total Qty-2 ,Amount-Gesamtbetrag 20,74 €<br/>
+Checkout Button Clicked<br/>
+Offer Available<br/>
+Email Enterered- rajeev-2-may@netthandelen.no<br/>
+Click on Guest Chekout Button<br/>
+Enter Zip Code -68159 <br/>
+Enter Mobile Number -01512345690 <br/>
+Enter First Name- Tøndevoldshagen<br/>
+Enter Last Name- Ola Magne<br/>
+Enter Address- co/ Torget 2 AS, Pb. 2010. 3255 Larvik<br/>
+Card Payment Selected<br/>
+Card Master Payment <br/>
+Master Card Number- 5413000000000000<br/>
+Master Card Expiry- 2020<br/>
+Master Card CVV- 786<br/>
+Master Ok Button<br/>
+Final Order Number- 16296153<br/>
+</div>
+</td>
+<td></td>
+<td>69</td>
 <td>src.com.pack.common.tests.CheckOutPageTest@eafc191</td></tr>
 </table><p>
 </body>

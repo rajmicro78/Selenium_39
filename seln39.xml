@@ -10,22 +10,22 @@
 <!--<parameter name="browserType" value="firefox"/>-->
 <parameter name="browserType" value="chrome"/>
 <!--<parameter name="browserType" value="ie"/>-->
- <!--<parameter name="env" value="Releasetest"/>-->
+ <parameter name="env" value="Releasetest"/>
 <!--<parameter name="env" value="Devbranch"/>-->
  <!-- <parameter name="env" value="Test"/>-->
 <parameter name="nasuser" value="venkata.rao"/>
 <parameter name="naspassword" value="Saisree@25"/>
-<parameter name="uEmail" value="rajeev-25-apr@netthandelen.no"/>
+<parameter name="uEmail" value="rajeev-2-may@netthandelen.no"/>
 <parameter name="uPassword" value="BN12345"/>
-<!--<suite-files>
-	 <suite-file path="home.xml"/>
+<suite-files>
+	 <!--<suite-file path="home.xml"/>-->
 	 <suite-file path="checkout.xml"/>
   	<suite-file path="PDA.xml"/>
-   </suite-files>-->
+   </suite-files>
 
- <parameter name="env" value="Live"/> 
-    <suite-files>
+ <!--<parameter name="env" value="Live"/> -->
+ <!--   <suite-files>
   	  	 <suite-file path="LiveScenario.xml"/>
-    </suite-files>
+    </suite-files>-->
 
 </suite>

@@ -32,7 +32,6 @@ public class CartPage {
 	private String freightValue;
 	private String freighmess;
 	private int frieght;
-	
 	private String total;
 	private int carttotal;
 	private int freightcharge;
