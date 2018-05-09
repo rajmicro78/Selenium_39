@@ -4,19 +4,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 public class CartPage {
 	private WebDriver driver;
 	public String companyName;
 	//private By prdCount =By.id("layoutCartProductCount");
-	//new changes 1703
-	private By prdCount =By.xpath("//span[contains(@class,'layoutCartProductCount')]");
-	private By freightMessage = By.className("freeFreightMessage");
-	private By noofProduct = By.xpath("//table[@id='cartProducts']/tbody/tr");
-	private By nooffreightrow = By.xpath("//table[@id='cartProducts']/tfoot/tr");
-	private By freightCharge = By.xpath("//table[@id='cartProducts']/tfoot/tr[2]/td[2]");
-	private By freightCharge1 = By.xpath("//table[@id='cartProducts']/tfoot/tr[1]/td[2]");
-	private By totalSum = By.xpath("//table[@id='cartProducts']/tfoot/tr[3]/td[2]");
+	//new changes 1805
+	@FindBy(xpath="//span[contains(@class,'layoutCartProductCount')]")			private WebElement prdCount;
+	@FindBy(className="freeFreightMessage")										private WebElement freightMessage;
+	
+	//private By noofProduct = By.xpath("//table[@id='cartProducts']/tbody/tr");
+	//private By nooffreightrow = By.xpath("//table[@id='cartProducts']/tfoot/tr");
+	//private By freightCharge = By.xpath("//table[@id='cartProducts']/tfoot/tr[2]/td[2]");
+	//private By freightCharge1 = By.xpath("//table[@id='cartProducts']/tfoot/tr[1]/td[2]");
+	//private By totalSum = By.xpath("//table[@id='cartProducts']/tfoot/tr[3]/td[2]");
 	private By qtyIncrease = By.xpath("//a[contains(@onclick,'AddProductToCart')]");
 	private By qtyDecrease = By.xpath("//table[@id='cartProducts']/tbody/tr/td[4]/div/a/i");
 	private By specialOffrproduct = By.xpath("//div[@id='specialOffersWrapper']/table/tbody/tr");
@@ -28,6 +31,7 @@ public class CartPage {
 	// new changes 1703 
 	private By Offercheck = By.xpath("//div[contains(@class,'offersCollection')]/div/div/div/div/span");
 	private By logoImage = By.xpath("//h2[@class='site-logo']/a");
+	
 	private int productCount; 
 	private String freightValue;
 	private String freighmess;
@@ -37,6 +41,7 @@ public class CartPage {
 	private int freightcharge;
 	public CartPage(WebDriver driver) {
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 		companyName = driver.findElement(logoImage).getAttribute("title");
 	}
 	public void cartPageDetail() throws Exception{
@@ -44,7 +49,7 @@ public class CartPage {
 		if(companyName.equals("Netthandelen.no")){
 			driver.findElement(By.xpath("//span[contains(@id,'layoutCartProductCount')]")).click();
 		}else{
-		driver.findElement(prdCount).click();}
+		prdCount.click();}
 		Thread.sleep(2000);
 		//driver.findElement(checkoutBtn).click();
 		//Thread.sleep(2000);

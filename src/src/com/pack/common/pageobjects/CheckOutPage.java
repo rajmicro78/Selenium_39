@@ -43,8 +43,9 @@ public class CheckOutPage {
 	private By selectCity = By.name("pups");
 	private By mobileTxtFld = By.name("mobileNumber");
 	//private By submitBtn = By.xpath("//div[contains(@class,'checkout-action')]/a");
-	//new changes 1703
+	
 	private By submitBtn = By.xpath("//a[contains(@data-ng-click,'submitOrder')]");
+	//private By submitBtn = By.id("submit-order");
 	private By nxtBtn = By.id("nextButton");
 	private By masterCartChk = By.id("MasterCard");
 	private By cartNumTxt = By.id("cardNumber");
@@ -226,6 +227,7 @@ public class CheckOutPage {
 			driver.findElement(mobileTxtFld).clear();
 			driver.findElement(mobileTxtFld).sendKeys("066123456789");
 			Reporter.log("Enter Mobile Number -066123456789 ");
+			Thread.sleep(1000);
 			}
 		else if(companyName.equals("Cocopanda.se")){
 			driver.findElement(zipCodeTxtFld).clear();
